@@ -63,6 +63,9 @@ def get_argparser():
   return parser
 
 if __name__=="__main__":
+  """
+  python3 NamuwikiExtractor.py --dump_path "/Volumes/My Passport for Mac/00_nlp/나무위키/docData200302.json" --output_file "./namuwiki.txt"
+  """
   parser = get_argparser()
   args = parser.parse_args()
 
