@@ -3,6 +3,7 @@ import ijson
 import kss
 import argparse
 from namuwiki.extractor import extract_text
+from tqdm import tqdm
 
 
 capture_values = [
@@ -26,8 +27,8 @@ def kss_sentence_seperator(file, text):
 def parse_namuwiki_json(path, limit=-1, debug=False):
   i = 0
   doc = {}
-  with open(path) as f:
-    for prefix, event, value in ijson.parse(f):
+  with open(path, encoding="utf-8") as f:
+    for prefix, event, value in tqdm(ijson.parse(f), desc="[Parsing]"):
 
       if debug:
         print(prefix, event, value)
