@@ -12,7 +12,7 @@
 ##### 0. 패키지 설치
 ```text
 ijson
-kss
+kss<2
 namu-wiki-extractor
 ```
 ##### 1. 나무위기 덤프 다운로드
